@@ -1,0 +1,10 @@
+[tool.pytest.ini_options]
+# Testy trzymamy wyłącznie w katalogu tests/. Bez tego pytest zbiera też
+# pliki *_test.py z całego repo (np. skrypty diagnostyczne integracji),
+# które przy imporcie odpalają realne usługi i wywalają całą kolekcję.
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+# Moduły aplikacji leżą w katalogu głównym repo (import database_controller,
+# platforms, ...). "python -m pytest" dokłada cwd do sys.path sam, ale gołe
+# "pytest" (tak leci CI) już nie - bez tego kolekcja się sypie na importach.
+pythonpath = ["."]

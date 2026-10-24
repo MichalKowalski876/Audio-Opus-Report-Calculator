@@ -1,0 +1,6 @@
+# Zależności do pracy nad projektem (testy).
+# Instalacja:  pip install -r requirements-dev.txt
+
+-r requirements.txt
+
+pytest==9.1.1

@@ -1,0 +1,18 @@
+{
+    "ink": "#20201f",
+    "ink_soft": "#2b2a29",
+    "red": "#b23138",
+    "paper": "#ffffff",
+    "text": "#2b2a29",
+    "muted": "#9a9794",
+    "line": "#e6e3e0",
+    "row_alt": "#faf8f7",
+    "row_subtotal": "#efebe8",
+    "on_ink": "#eeece9",
+    "on_ink_muted": "#8a8784",
+    "heading_font": "Georgia",
+    "logo_path": "",
+    "company_name": "Projekt Audio Opus",
+    "company_tagline": "Wydawnictwo · profesjonalne nagrania",
+    "company_website": "audioopus.pl"
+}

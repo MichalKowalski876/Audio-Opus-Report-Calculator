@@ -1,0 +1,51 @@
+# Środowiska wirtualne
+venv/
+.venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.build-env/
+.build-python/
+build/
+dist/
+
+# IDE / narzędzia
+.idea/
+.vscode/
+*.swp
+.ai/
+.claude/
+
+# Raporty zawierają dane rozliczeniowe i nie mogą trafić do repozytorium.
+Reports/**
+!Reports/.gitkeep
+
+# Logi
+*.log
+
+# Sekrety nie powinny trafiać do repozytorium.
+Databases/smtp_config.json
+
+# Databases/db.sqlite jest śledzone wyłącznie jako pusta baza startowa ze
+# schematem. Nigdy nie commituj bazy używanej w pracy ani jej kopii zapasowych.
+*.sqlite
+!Databases/db.sqlite
+
+# Local UI state – per maszyna, nie do repozytorium.
+Databases/ui_warnings.json
+Databases/debug_config.json
+Databases/theme_config.json
+
+# Gmail API
+Integrations/Gmail/Config/*credentials*.json
+Integrations/Gmail/Config/*token*.json
+Integrations/Gmail/Config/client_secret*.json
+!Integrations/Gmail/Config/credentials.example.json

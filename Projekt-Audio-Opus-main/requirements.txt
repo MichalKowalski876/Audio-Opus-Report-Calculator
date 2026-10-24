@@ -1,0 +1,19 @@
+# Zależności produkcyjne aplikacji Audio Opus.
+# Instalacja:  pip install -r requirements.txt
+#
+# Wersje przypięte do sprawdzonego środowiska. Podnoś świadomie i sprawdzaj
+# testami (pytest) – zwłaszcza PySide6, bo od niego zależy całe GUI oraz
+# generowanie PDF (QPdfWriter).
+
+PySide6==6.11.2
+openpyxl==3.1.5
+python-docx
+rarfile
+keyring==25.6.0
+
+# Integracja Gmail API (zakładka Debug -> Poczta: podgląd skrzynki i załączników).
+# Importowane w Integrations/Gmail/Config/gmail_auth.py. MainWindow ładuje ten
+# łańcuch przy starcie, więc bez tych pakietów apka i testy nie wstają.
+google-api-python-client==2.200.0
+google-auth==2.57.1
+google-auth-oauthlib==1.4.1

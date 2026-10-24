@@ -1,0 +1,30 @@
+# Normalizacja końców linii: w repozytorium zawsze LF, w kopii roboczej
+# zależnie od systemu. Kończy z powracającym szumem CRLF/LF przy merge'ach
+# między różnymi maszynami.
+#
+# Uwaga: żeby znormalizować pliki już w historii, jednorazowo uruchom:
+#   git add --renormalize .
+#   git commit -m "Normalize line endings"
+
+* text=auto eol=lf
+
+*.py    text eol=lf
+*.qss   text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.toml  text eol=lf
+*.cfg   text eol=lf
+*.ini   text eol=lf
+
+# Pliki binarne – bez diffowania i bez normalizacji.
+*.sqlite binary
+*.db     binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.pdf    binary
+*.xlsx   binary
+*.xls    binary
